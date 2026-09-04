@@ -56,11 +56,24 @@ return 0;
 Revise el contenido de _programa.i_ y conteste lo siguiente:
 <ol type="a">
   <li>¿Qué ocurre cuando se invoca el comando <i>cpp</i> con esos argumentos?</li>
+
+  <p><strong>Respuesta:</strong>Se crea el archivo programa.i</p>
+
   <li>¿Qué similitudes encuentra entre los archivos <i>programa.c</i> y <i>programa.i</i>?</li>
+
+  <p><strong>Respuesta:</strong>El main es casi igual, se modifica solo
+  float mi_area = area(3); -> float mi_area = (3.1416 * 3 * 3);</p>
+
   <li>¿Qué pasa con las macros y los comentarios del código fuente original en <i>programa.i</i>?</li>
+
+  <p><strong>Respuesta:</strong> Los comentarios se eliminan y las macros se definen en el mismo programa, por eso es el cambio de area(3) ->(3.1416 * 3 * 3)</p>
+
   <li>Compare el contenido de <i>programa.i</i> con el de <i>stdio.h</i> e indique de forma general las similitudes entre ambos
   archivos.</li>
   <li>¿A qué etapa corresponde este proceso?</li>
+
+  <p><strong>Respuesta:</strong> Al ejecutar cpp se crea el archivo con la extención .i , este, al no tener comentarios ni tener macros, pero al no estar aun en lenguaje ensamblador, supondria que se trata del preprocesador, el cual el .i seria el programa fuente modificado </p>
+
 </ol>
 
 ---
@@ -68,6 +81,9 @@ Revise el contenido de _programa.i_ y conteste lo siguiente:
 4. Ejecute la siguiente instrucción: ``gcc -Wall -S programa.i``
 <ol type="a">
   <li>¿Para qué sirve la opción <i>-Wall</i>?</li>
+
+  <p><strong>Respuesta:</strong> warning all: da las advertencias de todo lo que pueda ocurrir</p>
+
   <li>¿Qué le indica a gcc la opción <i>-S</i>?</li>
   <li>¿Qué contiene el archivo de salida y cuál es su extensión?</li>
   <li>¿A qué etapa corresponde este comando?</li>
