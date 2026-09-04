@@ -61,18 +61,20 @@ Revise el contenido de _programa.i_ y conteste lo siguiente:
 
   <li>¿Qué similitudes encuentra entre los archivos <i>programa.c</i> y <i>programa.i</i>?</li>
 
-  <p><strong>Respuesta:</strong>El main es casi igual, se modifica solo
-  float mi_area = area(3); -> float mi_area = (3.1416 * 3 * 3);</p>
+  <p><strong>Respuesta:</strong>La estructura principal del programa se conserva, incluyendo la funcion main y las instrucciones del programa. Sin embargo, las macros son sustituidas por su contenido, por ejemplo, float mi_area = area(3); se convierte en float mi_area = (3.1416 * 3 * 3);.</p>
 
   <li>¿Qué pasa con las macros y los comentarios del código fuente original en <i>programa.i</i>?</li>
 
-  <p><strong>Respuesta:</strong> Los comentarios se eliminan y las macros se definen en el mismo programa, por eso es el cambio de area(3) ->(3.1416 * 3 * 3)</p>
+  <p><strong>Respuesta:</strong> Los comentarios se eliminan y las macros son procesadas y sustituidas por su contenido., por eso es el cambio de area(3) ->(3.1416 * 3 * 3)</p>
 
   <li>Compare el contenido de <i>programa.i</i> con el de <i>stdio.h</i> e indique de forma general las similitudes entre ambos
   archivos.</li>
+
+  <!-- !FALTA -->
+
   <li>¿A qué etapa corresponde este proceso?</li>
 
-  <p><strong>Respuesta:</strong> Al ejecutar cpp se crea el archivo con la extención .i , este, al no tener comentarios ni tener macros, pero al no estar aun en lenguaje ensamblador, supondria que se trata del preprocesador, el cual el .i seria el programa fuente modificado </p>
+  <p> <strong>Respuesta:</strong> Al ejecutar cpp se crea el archivo con la extención .i , este, al no tener comentarios ni tener macros, pero al no estar aun en lenguaje ensamblador, supondria que se trata del preprocesador, el cual el .i seria el programa fuente modificado </p>
 
 </ol>
 
@@ -85,8 +87,17 @@ Revise el contenido de _programa.i_ y conteste lo siguiente:
   <p><strong>Respuesta:</strong> warning all: da las advertencias de todo lo que pueda ocurrir</p>
 
   <li>¿Qué le indica a gcc la opción <i>-S</i>?</li>
+
+  <!--!FALTA  -->
+
   <li>¿Qué contiene el archivo de salida y cuál es su extensión?</li>
+
+  <!--!FALTA  -->
+
   <li>¿A qué etapa corresponde este comando?</li>
+
+  <!--!FALTA  -->
+
 </ol>
 
 ---
@@ -94,9 +105,21 @@ Revise el contenido de _programa.i_ y conteste lo siguiente:
 5. Ejecute la siguiente instrucción: `as programa.s -o programa.o`
 <ol type="a">
   <li> Antes de revisarlo, indique cuál es su hipótesis sobre lo que debe contener el archivo con extensión  <i>.o</i>. </li>
+
+ <!--!FALTA  -->
+
   <li> Diga de forma general qué contiene el archivo <i>programa.o</i> y por qué se visualiza de esa manera. </li>
+
+  <!--!FALTA  -->
+
   <li> ¿Qué programa se invoca con  <i>as</i>? </li>
+
+  <!--!FALTA  -->
+
   <li> ¿A qué etapa corresponde la llamada a este programa? </li>
+
+  <!--!FALTA  -->
+
 </ol>
 
 ---
@@ -119,6 +142,9 @@ ld -o ejecutable -dynamic-linker /lib/ld-linux-x86-64.so.2 /usr/lib/Scrt1.o /usr
 <ol type="a">
   <li> En caso de que el comando ld mande errores, investigue como enlazar un programa utilizando el comando <i>ld</i>. Y proponga una posible solución para llevar a cabo este proceso con éxito. </li>
   <li> Describa el resultado obtenido al ejecutar el comando anterior. </li>
+
+  <!--!FALTA  -->
+
 </ol>
 
 ---
@@ -130,21 +156,30 @@ instrucción en la terminal: ```./ejecutable```
 <ol type="a">
   <li> Genere nuevamente el archivo.i. De preferencia asigne un nuevo nombre.</li>
   <li> ¿Cambia en algo la ejecución final? </li>
+
+  <!--!FALTA  -->
+
 </ol>
 
 ---
 
-10. Escribe un segundo programa en lenguaje **_C_** en el que agregue 4 directivas del preprocesador
+1.  Escribe un segundo programa en lenguaje **_C_** en el que agregue 4 directivas del preprocesador
 de _**C**_ (_cpp_)[^1]. Las directivas elegidas deben jugar algún papel en el significado del programa, ser distintas entre sí y
 diferentes de las utilizadas en el primer programa (aunque no están prohibidas si las requieren). 
 <ol type="a">
     <li>Explique su utilidad
 general y su función en particular para su programa.</li>
+
+<!--!FALTA  -->
+
 </ol>
 
 ---
 
 11. Redacte un informe detallado con sus resultados y conclusiones.
 
+<!--!FALTA  -->
+
 
 [^1]: Pueden consultar la lista de directivas en su documentación en línea: [CPP - Index of directives](https://gcc.gnu.org/onlinedocs/cpp/Index-of-Directives.html##Index-of-Directives). O bien, revisar la entrada para este preprocesador en la herramienta man en Linux: `$ man cpp`
+
