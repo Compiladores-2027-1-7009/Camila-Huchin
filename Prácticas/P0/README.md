@@ -74,7 +74,7 @@ Revise el contenido de _programa.i_ y conteste lo siguiente:
 
   <li>¿A qué etapa corresponde este proceso?</li>
 
-  <p> <strong>Respuesta:</strong> Al ejecutar cpp se crea el archivo con la extención .i , este, al no tener comentarios ni tener macros, pero al no estar aun en lenguaje ensamblador, supondria que se trata del preprocesador, el cual el .i seria el programa fuente modificado </p>
+  <p> <strong>Respuesta:</strong> Al ejecutar cpp se crea el archivo con la extención .i , este, al no tener comentarios ni tener macros, pero al no estar aun en lenguaje ensamblador, supondria que se trata del <strong>preprocesador</strong>, el cual el .i seria el programa fuente modificado </p>
 
 </ol>
 
@@ -84,47 +84,52 @@ Revise el contenido de _programa.i_ y conteste lo siguiente:
 <ol type="a">
   <li>¿Para qué sirve la opción <i>-Wall</i>?</li>
 
-  <p><strong>Respuesta:</strong> warning all: da las advertencias de todo lo que pueda ocurrir</p>
+  <p><strong>Respuesta:</strong> warning all: activa la mayoría de las advertencias importantes del compilador: variables sin inicializar, conversiones sospechosas, funciones sin prototipo, etc.</p>
+  <!--(https://mundobytes.com/tutorial-completo-del-comando-gcc-y-sus-opciones-clave/) -->
 
   <li>¿Qué le indica a gcc la opción <i>-S</i>?</li>
 
-  <!--!FALTA  -->
+  <p><strong>Respuesta:</strong>  Que tiene que compilar, sin ensamblar. </p>
+
+  <!--(https://mundobytes.com/tutorial-completo-del-comando-gcc-y-sus-opciones-clave/) -->
 
   <li>¿Qué contiene el archivo de salida y cuál es su extensión?</li>
 
-  <!--!FALTA  -->
+  <p><strong>Respuesta:</strong> Genera código ensamblador en un archivo con extensión .s.</p>
+
+  <!--(https://mundobytes.com/tutorial-completo-del-comando-gcc-y-sus-opciones-clave/) -->
 
   <li>¿A qué etapa corresponde este comando?</li>
 
-  <!--!FALTA  -->
+  <p><strong>Respuesta:</strong> Al <strong>Compilador</strong>, ya que desde un programa fuente modificado (programa.i), el compilador genera un programa objeto en lenguaje ensamblador (programa.s) </p>
 
 </ol>
 
 ---
 
-5. Ejecute la siguiente instrucción: `as programa.s -o programa.o`
+1. Ejecute la siguiente instrucción: `as programa.s -o programa.o`
 <ol type="a">
   <li> Antes de revisarlo, indique cuál es su hipótesis sobre lo que debe contener el archivo con extensión  <i>.o</i>. </li>
 
- <!--!FALTA  -->
+ <p><strong>Respuesta:</strong>Seria el programa objeto </p>
 
   <li> Diga de forma general qué contiene el archivo <i>programa.o</i> y por qué se visualiza de esa manera. </li>
 
-  <!--!FALTA  -->
+  <p><strong>Respuesta:</strong> Simbolos que la computadora no reconoce y unas cuantas cadenas que se habian declarado en el .c</p>
 
   <li> ¿Qué programa se invoca con  <i>as</i>? </li>
 
-  <!--!FALTA  -->
+  <p><strong>Respuesta:</strong> Assembler</p>
 
   <li> ¿A qué etapa corresponde la llamada a este programa? </li>
 
-  <!--!FALTA  -->
+  <p><strong>Respuesta:</strong><strong>Enlazador/Cargador</strong> y el archivo .o es el codigo de maquina destino, en este caso a lenguaje ensamblador </p>
 
 </ol>
 
 ---
 
-6. Encuentre la ruta de los siguientes archivos en el equipo de trabajo:
+1. Encuentre la ruta de los siguientes archivos en el equipo de trabajo:
 * ld-linux-x86-64.so.2
 * Scrt1.o (o bien, crt1.o)
 * crti.o
