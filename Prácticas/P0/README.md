@@ -202,13 +202,13 @@ general y su función en particular para su programa.</li>
 
 <p>Existen diferentes programas que permiten observar las distintas etapas del proceso de compilación de programas escritos en <strong>C</strong>. Estos programas generan archivos intermedios que permiten analizar cómo se transforma el código fuente hasta obtener un programa ejecutable. Durante la práctica se utilizaron los siguientes:</p>
 
-*<strong>cpp</strong>: Se encarga del <strong>preprocesamiento</strong> del código fuente. Genera un archivo <strong>.i</strong>, en el cual se procesan las directivas del preprocesador, se eliminan los comentarios y se sustituyen las macros. Además, se incorporan los contenidos de los archivos incluidos mediante <strong> # include </strong>.
+* <strong>cpp</strong>: Se encarga del <strong>preprocesamiento</strong> del código fuente. Genera un archivo <strong>.i</strong>, en el cual se procesan las directivas del preprocesador, se eliminan los comentarios y se sustituyen las macros. Además, se incorporan los contenidos de los archivos incluidos mediante <strong> # include </strong>.
 
-*<strong>gcc</strong>: Se encarga de realizar la <strong>compilación</strong> del código preprocesado y puede generar un archivo <strong>.s</strong>, que contiene el programa traducido a <strong>lenguaje ensamblador</strong>, pero que todavía no ha sido ensamblado.
+* <strong>gcc</strong>: Se encarga de realizar la <strong>compilación</strong> del código preprocesado y puede generar un archivo <strong>.s</strong>, que contiene el programa traducido a <strong>lenguaje ensamblador</strong>, pero que todavía no ha sido ensamblado.
 
-*<strong>as</strong>: Se encarga de <strong>ensamblar</strong> el archivo <strong>.s</strong> y convertirlo en un archivo objeto <strong>.o</strong>. El archivo objeto contiene código máquina, pero todavía no constituye un programa ejecutable completo.
+* <strong>as</strong>: Se encarga de <strong>ensamblar</strong> el archivo <strong>.s</strong> y convertirlo en un archivo objeto <strong>.o</strong>. El archivo objeto contiene código máquina, pero todavía no constituye un programa ejecutable completo.
 
-*<strong>ld</strong>: Se encarga del <strong>enlazado</strong>. Toma el archivo objeto y los archivos necesarios para el inicio y funcionamiento del programa, además de las bibliotecas requeridas, y los combina para generar el archivo ejecutable final.
+* <strong>ld</strong>: Se encarga del <strong>enlazado</strong>. Toma el archivo objeto y los archivos necesarios para el inicio y funcionamiento del programa, además de las bibliotecas requeridas, y los combina para generar el archivo ejecutable final.
 
 <p>Durante la práctica se observo que el proceso de compilación no ocurre en un solo paso, sino que se forma por varias etapas. A partir de un archivo fuente <strong>.c</strong>, el código pasa por el preprocesamiento, la compilación, el ensamblado y finalmente el enlazado.</p>
 
