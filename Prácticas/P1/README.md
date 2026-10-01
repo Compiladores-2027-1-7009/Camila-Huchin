@@ -116,11 +116,62 @@ e. Ejecutar mediante: ```./nombreEjecutable```
 
 #### Ejercicios 
 1. ¿Qué ocurre si en la primera sección se quitan las llaves al nombre de la macro letra? (0.5 pts)
+
+No reconoce que es una palabra (no sustituye la macro), por lo tanto no manda el mensaje "Encontré una palabra: " al menos que pongamos literalmente "letra"
+
+letraletraletraletra
+Encontré una palabra: letra
+Encontré una palabra: letra
+Encontré una palabra: letra
+Encontré una palabra: letra
+
+
 2. ¿Qué ocurre si en la segunda sección se quitan las llaves a las macros? (0.5 pts)
+
+Similar al anterior, interpreta literalmente la cadena como digito o palabra y no el conjunto que habiamos definido en la primera seccion
+
+hola
+digito
+Encontré un número: digito
+
+palabra
+Encontré una palabra: palabra
+
 3. ¿Cómo se escribe un comentario en flex? (0.5 pts)
+
+Inicia con /* <comentario> */
+
+/* Comentario*/
+
 4. ¿Qué se guarda en yytext? (0.5 pts)
+
+Guarda el lexema, es decir, la cadena de caracteres de la entrada que coincidió con el patrón de la regla que se activó (terminada en nulo).
+
 5. ¿Qué pasa al ejecutar el programa e introducir cadenas de caracteres y de dígitos por la consola? (0.5 pts)
+
+El programa reconoce palabras (letras) y números (dígitos), y cada vez que los encuentra imprime el mensaje. Los espacios y saltos de línea se ignoran por tener una acción vacía. Los demás caracteres (paréntesis, llaves, =, ;) no coinciden con ninguna regla y se copian tal cual a la salida.
+
+public static void main (args) {int num = 9;}
+Encontré una palabra: public
+Encontré una palabra: static
+Encontré una palabra: void
+Encontré una palabra: main
+(Encontré una palabra: args
+){Encontré una palabra: int
+Encontré una palabra: num
+=Encontré un número: 9
+
 6. ¿Qué ocurre si introducimos caracteres como "\*" en la consola? (0.5 pts)
+
+Como * no coincide con ninguna regla, flex aplica su regla por defecto, que copia el carácter a la salida sin ejecutar ninguna acción. Se ve impreso el *, pero sin mensaje.
+
+*
+*
+/
+/+
++-
+-
+
 7. Modificar al código anterior en un archivo nuevo, de tal manera que reconozca lo siguiente: (2 pts)
     1. La expresión regular para los hexadecimales en lenguaje C++.
     2. 5 palabras reservadas del lenguaje C++.
@@ -194,7 +245,12 @@ $ ./compiler prueba
 #### Ejercicios
 
 8. Describir el conjunto de terminales y la expresión regular que reconoce a cada uno  en _lexer.ll_. (2 pts)
+
+
+
 9. Generar acciones léxicas para cada terminal de nuestro lenguaje en _Lexer.cpp_, de modo que se muestre en pantalla la salida esperada con el archivo _prueba_. (2 pts)
+
+
 10. Crear un _Makefile_. (1 pt)
 
 ---
