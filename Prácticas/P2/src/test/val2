@@ -1,0 +1,9 @@
+int x;
+float _y, z1;
+float w;
+
+x = 10;
+_y = 3.14;
+w = 1.5e2 - x;
+while (x) if (x) x = x - 1; else x = 0;
+z1 = ((x));

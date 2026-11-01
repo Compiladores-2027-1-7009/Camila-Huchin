@@ -15,11 +15,11 @@ int line=1;
 
 
 DIG [0-9]
-ID_ [_a-zA-Z_][a-zA-Z0-9_]*
+ID_ [_a-zA-Z][a-zA-Z0-9_]*
 NUM {DIG}+(\.{DIG}+)?([eE][+-]?{DIG}+)?
 
 %%
-
+    /*Se definen los tokens que se van a reconocer. Estos se conforman del conjunto de los elementos terminales, como se ve, se remplasa el terminal numero por la expresion regular que lo define ({NUM}) y el terminal identificador por la expresion regular que lo define ({ID})*/
 "int" {return t_int; }
 "float" {return t_float; }
 "=" {return t_equal; }
@@ -34,11 +34,13 @@ NUM {DIG}+(\.{DIG}+)?([eE][+-]?{DIG}+)?
 "-" {return t_menos; }
 "*" {return t_mul; }
 "/" {return t_div; }
-{DIG}+ {return t_numero; }
+    /*Se ponen hasta el final ya que se elige el token mas largo y si hay algun empate la regla que aparece primero*/
+{NUM} { return t_numero; }
 {ID_} {return t_id; }
 
 [ \t\r]+ {}
 "\n" 	 {line++;}
+
 .    	 { cout << "ERROR LEXICO " << yytext << endl;}
 
 %%

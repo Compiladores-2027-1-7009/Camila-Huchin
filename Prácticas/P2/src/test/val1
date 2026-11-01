@@ -1,0 +1,8 @@
+int a, b;
+float c;
+
+a = 1;
+b = a + 2 * 3;
+c = (a + b) / 2;
+if (a) b = 1; else b = 2;
+while (a) a = a - 1;

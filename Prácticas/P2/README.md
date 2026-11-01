@@ -238,4 +238,15 @@ Como no se realizo factorización izquierda, los conjuntos _N_ y _P_ se mantiene
 
 8. Documentar el código. (0.25pts)
 9. Proponer 4 archivos de prueba nuevos, 2 válidos y 2 inválidos. (0.25pts)
+
+archivos en carpera _test_
+
 10. Modificar el Makefile para poder simplificar el proceso de compilación de la práctica. (1pt)
+
+Uso:
+
+bash
+make          # genera Lexer.cpp, compila y enlaza
+make run      # prueba con el archivo "prueba"
+make test     # corre los 4 archivos nuevos
+make clean    # borra lo generado

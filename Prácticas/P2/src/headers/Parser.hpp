@@ -12,7 +12,7 @@ namespace C_1
 
   private:
     Lexer *lexer;
-    int token;
+    Token token;
     
   public:
     Parser();
@@ -20,13 +20,23 @@ namespace C_1
     ~Parser();
     
     void programa(); //función del símbolo incial
-    /**
-     *
-     *
-     * Funciones del resto de NTs 
-     *
-     *
-     */
+    void declaraciones();
+    void declaracionesP();
+    void declaracion();
+    void tipo();
+    void lista_var();
+    void lista_varP();
+    void sentencias();
+    void sentenciasP();
+    void sentencia();
+    void E();
+    void EP();
+    void T();
+    void TP();
+    void F();
+
+    void match(Token esperado);
+    string nombre(Token t);
     
     Token eat();
     void error(string msg);
