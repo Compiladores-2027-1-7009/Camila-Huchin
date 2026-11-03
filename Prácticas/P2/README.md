@@ -244,9 +244,6 @@ archivos en carpera _test_
 10. Modificar el Makefile para poder simplificar el proceso de compilación de la práctica. (1pt)
 
 Uso:
-
-bash
-make          # genera Lexer.cpp, compila y enlaza
-make run      # prueba con el archivo "prueba"
-make test     # corre los 4 archivos nuevos
-make clean    # borra lo generado
+make         
+make run 
+para las pruebas del punto 9, make test

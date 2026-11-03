@@ -3,6 +3,7 @@
 
 #if !defined(yyFlexLexerOnce)
 #include <FlexLexer.h>
+#include <iostream>
 #endif
 
 class Lexer : public yyFlexLexer
